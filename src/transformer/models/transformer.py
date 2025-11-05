@@ -81,7 +81,7 @@ class Transformer(nn.Module):
 
         # 编码器前向传播
         encoder_output = self.encoder(src_emb, src_mask)
-
+        #encoder_output = src_emb # 去掉编码器
         # 解码器向前传播
         decoder_output = self.decoder(tgt_emb, encoder_output, dec_self_mask, enc_dec_mask)
 

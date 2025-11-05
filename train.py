@@ -115,6 +115,7 @@ def train():
     # 准备检查点目录
     checkpoint_dir = cfg.training.checkpoint_dir
     os.makedirs(checkpoint_dir, exist_ok=True)
+    #best_model_path = os.path.join(checkpoint_dir, f"best_model_{cfg.data.lang_src}_to_{cfg.data.lang_tgt}_{cfg.training.epoches}_without_encoder.pth")
     best_model_path = os.path.join(checkpoint_dir, f"best_model_{cfg.data.lang_src}_to_{cfg.data.lang_tgt}_{cfg.training.epoches}.pth")
     # 开始训练循环
     print("开始训练...")
@@ -152,6 +153,7 @@ def train():
             print(f"新最佳模型已保存到 {best_model_path}")
     # 绘制并保存损失曲线
     figure_path = os.path.join(cfg.training.results_dir, f"loss_curve_{cfg.data.lang_src}_to_{cfg.data.lang_tgt:}.png")
+    #figure_path = os.path.join(cfg.training.results_dir, f"loss_curve_{cfg.data.lang_src}_to_{cfg.data.lang_tgt:}_without_encoder.png")
     draw_loss_curve(train_loss_list, val_loss_list, figure_path)
     print("训练完成...")
     print(f"最佳验证损失: {best_val_loss:.4f}")
