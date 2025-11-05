@@ -1,0 +1,9 @@
+data/iwslt2017/zh-en
+data/iwslt2017/en-de
+data/iwslt2017/iwslt_loader.py
+logs/
+checkpoints/
+*.json
+swanlog/
+__pycache__/
+*.pyc
