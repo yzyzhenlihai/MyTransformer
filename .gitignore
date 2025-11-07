@@ -7,3 +7,4 @@ checkpoints/
 swanlog/
 __pycache__/
 *.pyc
+translate.py
