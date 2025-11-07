@@ -25,7 +25,8 @@
 │   ├── engine.py                               （训练及评估方法）
 │   ├── __init__.py
 │   └── scheduler.py                            （学习率调度器实现）
-└── train.py
+└── train.py                                    （训练代码）  
+└── translate.py                                （推理代码）
 ```
 
 ### 运行方式
@@ -45,10 +46,14 @@
     open_swanlab: true
     wanlab_key: "ccVCViGdYDi4LOGAy6FBp"
     ```
-4. `cd` 到 `./MyTransformer`目录下一键运行脚本
+4. `cd` 到 `./MyTransformer`目录下一键运行脚本，开始训练
     ```bash
     ./scripts/run.sh
     ```  
+5. 执行翻译任务,根据提示输入即可
+   ```bash
+   python translate.py
+   ```
 
 ### 复现要求
    - **GPU：** A4000
