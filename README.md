@@ -29,19 +29,23 @@
 ```
 
 ### 运行方式
-1. 解压缩 `data` 文件夹下的文件压缩包
+1. 安装依赖
+   ```bash
+   pip install -r ./requirements.txt
+   ```
+2. 解压缩 `data` 文件夹下的文件压缩包
    ```bash
    cd ./data/iwslt2017
    tar -zxvf ./en-de.zip
    ```
-2. 修改 `./config/transformer.yaml` 配置文件
+3. 修改 `./config/transformer.yaml` 配置文件
     ```yaml
     # 配置自己的swanlab的api key
     #也可选择将open_swanlab: false
     open_swanlab: true
     wanlab_key: "ccVCViGdYDi4LOGAy6FBp"
     ```
-3. `cd` 到 `./MyTransformer`目录下一键运行脚本
+4. `cd` 到 `./MyTransformer`目录下一键运行脚本
     ```bash
     ./scripts/run.sh
     ```  
